@@ -1,0 +1,25 @@
+public class pemogramaan2 {
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+
+    // Method utama (main) untuk menguji metode isEven
+    public static void main(String[] args) {
+        // Bilangan untuk diuji
+        int bilangan1 = 40;
+        int bilangan2 = 3;
+
+        // Pengujian metode isEven
+        if (isEven(bilangan1)) {
+            System.out.println(bilangan1 + " adalah bilangan genap.");
+        } else {
+            System.out.println(bilangan1 + " bukan bilangan genap.");
+        }
+
+        if (isEven(bilangan2)) {
+            System.out.println(bilangan2 + " adalah bilangan genap.");
+        } else {
+            System.out.println(bilangan2 + " bukan bilangan genap.");
+        }
+    }
+}
