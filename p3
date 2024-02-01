@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class program3 {
+
+    // Metode isVowel yang mengembalikan true jika karakter adalah vokal, false sebaliknya
+    public static boolean isVowel(char ch) {
+        // Menggunakan metode toLowerCase untuk memastikan pengecekan karakter tidak bersifat case-sensitive
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+
+    // Metode untuk menghitung jumlah vokal dalam string
+    public static int countVowels(String input) {
+        int count = 0;
+        for (int i = 0; i < input.length(); i++) {
+            char currentChar = input.charAt(i);
+            if (isVowel(currentChar)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    // Metode main untuk menerima input dari pengguna dan mencetak jumlah vokal
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Masukkan sebuah string: ");
+        String userInput = scanner.nextLine();
+
+        int numVowels = countVowels(userInput);
+        if (numVowels > 0) {
+            System.out.println("Jumlah vokal dalam string tersebut adalah: " + numVowels);
+        } else {
+            System.out.println("Vokal anda gagal, silahkan masukkan huruf vokal yang benar");
+        }
+     scanner.close();
+}
+}
